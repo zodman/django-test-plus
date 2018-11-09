@@ -10,7 +10,10 @@ from django.db.models import Q
 from django.shortcuts import resolve_url
 from django.test import RequestFactory, signals, TestCase as DjangoTestCase
 from django.test.client import store_rendered_templates
-from django.test.utils import CaptureQueriesContext
+try:
+    from django.test.utils import CaptureQueriesContext
+except ImportError:
+    CaptureQueriesContext = object
 from django.utils.functional import curry
 
 from .compat import reverse, NoReverseMatch, get_api_client
