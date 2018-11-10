@@ -24,11 +24,11 @@ setup(
     include_package_data=True,
     packages=find_packages(),
     zip_safe=False,
-    entry_points={"pytest11": ["test_plus = test_plus.plugin"]},
-    setup_requires=[
-        'pytest-runner',
-        'pytest-django',
-    ],
+    #entry_points={"pytest11": ["test_plus = test_plus.plugin"]},
+    #setup_requires=[
+    #    'pytest-runner',
+    #    'pytest-django',
+    #],
     tests_require=[
         'pytest',
         'pytest-django',
